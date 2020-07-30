@@ -32,9 +32,8 @@ const calcuratePossibilities = (words: Word[], likenesses: Array<number | null>)
   const similarityRelations = words.map((item, i, ar) => item.calcurateSimilarities(ar));
 
   const ignoredWordIndexes = likenesses.reduce((list, likeness, wordIndex) => (
-    likeness === null ? list : [...list, ...(similarityRelations[wordIndex].reduce((a, c, i) => c !== likeness ? [...a, i] : a, []))]
+    likeness === null ? list : [...list, ...(similarityRelations[wordIndex].reduce((a, c, i) => c !== likeness ? [...a, i] : a, [])), wordIndex]
   ), [] as number[]).filter((item, i, ar) => ar.indexOf(item) === i);
-
 
   const result = similarityRelations.map((item, i, ar) => (
     ignoredWordIndexes.indexOf(i) > -1 ? 0 : item.reduce((a, b) => a + b, 0)

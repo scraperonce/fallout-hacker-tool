@@ -21,11 +21,11 @@ export default class Word {
 
   public calcurateSimilarities(operands: Word[]): number[] {
     return operands.map(operand => {
-      if (this === operand || this.length === 0) {
+      if (this.length === 0) {
         return 0;
       }
 
-      const norm = this.chars.map((c, i) => c === operand.chars[i] ? 1 : 0).reduce((a, c) => a + c, 0);
+      const norm = this.chars.reduce((a, c, i) => a + (c === operand.chars[i] ? 1 : 0), 0);
 
       return norm;
     });
