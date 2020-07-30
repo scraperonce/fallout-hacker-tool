@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "build": "rm public/* ; parcel build ./src/index.html --no-cache"
+    "build": "rm public/* ; parcel build ./src/index.html --no-cache --public-url '.'"
   },
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
