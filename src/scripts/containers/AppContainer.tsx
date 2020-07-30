@@ -41,7 +41,7 @@ const AppContainer: React.FC = () => {
     () => {
       if (length) {
         const baseWordList = listofwords.data.filter(v => v.length === length);
-        const baseArray = new Array(baseWordList.length > 20 ? 20 : baseWordList.length);
+        const baseArray = new Array(baseWordList.length > 40 ? 40 : baseWordList.length);
 
         setWordList(baseWordList);
         setWords(Array.from(baseArray, () => ''));
