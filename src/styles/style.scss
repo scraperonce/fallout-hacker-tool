@@ -1,0 +1,61 @@
+html, body {
+  box-sizing: border-box;
+}
+
+body,
+table,
+input {
+  font-family: "Courier New", monospace;
+}
+
+body {
+  color: #23dd23;
+  background-color: #202020;
+}
+
+p {
+  line-height: 1.5;
+}
+
+input {
+  display: block;
+  color: #23dd23;
+  background-color: #202020;
+  font-size: 1rem;
+  border: 1px currentColor solid;
+  font-weight: bold;
+  letter-spacing: 1px;
+  outline: none;
+  padding: .25rem;
+  width: calc(100% - 1rem);
+  border-radius: 0;
+
+  &:focus,
+  &:active {
+    color: #202020;
+    background-color: #23dd23;
+    border-color: #23dd23;
+  }
+}
+
+header,
+main {
+  margin: .5rem;
+}
+
+table {
+  width: 100%;
+
+  th {
+    word-break: break-all;
+    text-align: left;
+  }
+}
+
+.card {
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #23dd23;
+  max-width: 40rem;
+  margin: 1.5rem 0;
+}

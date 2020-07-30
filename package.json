@@ -1,0 +1,26 @@
+{
+  "name": "fallout-hacker-tool",
+  "version": "1.0.0",
+  "main": "dist/index.html",
+  "author": "Hisataka Ishii <scraper.once@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/resolver-default": "^2.0.0-alpha.3",
+    "@parcel/transformer-css": "^2.0.0-alpha.3",
+    "@parcel/transformer-postcss": "^2.0.0-alpha.3",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.1",
+    "parcel": "next",
+    "sass": "^1.26.10"
+  }
+}
