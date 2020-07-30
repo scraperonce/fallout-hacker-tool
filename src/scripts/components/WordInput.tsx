@@ -28,6 +28,16 @@ const WordInput: React.FC<Props> = ({value, onChange, list, error = false, ...pr
     [onChange, text]
   );
 
+  useEffect(
+    () => {
+      const timer = setTimeout(handleChange, 1000);
+      return () => {
+        clearTimeout(timer);
+      }
+    },
+    [text],
+  );
+
   return (
     <InputView
       error={error}

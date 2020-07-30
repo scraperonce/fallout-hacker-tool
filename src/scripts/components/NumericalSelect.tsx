@@ -41,6 +41,7 @@ const InputView = styled.input`
 
 const NumericalSelect: React.FC<Props> = ({value, onSelect, minimum = minimumValue, maximum = maximumValue, ...props}) => {
   const [current, setCurrent] = useState<number | null>(value);
+  const handleSelect = () => onSelect(fallback(current, minimum, maximum));
 
   useEffect(
     () => {
@@ -49,6 +50,16 @@ const NumericalSelect: React.FC<Props> = ({value, onSelect, minimum = minimumVal
       }
     },
     [value],
+  );
+
+  useEffect(
+    () => {
+      const timer = setTimeout(handleSelect, 1000);
+      return () => {
+        clearTimeout(timer);
+      }
+    },
+    [current],
   );
 
   return (
@@ -61,7 +72,7 @@ const NumericalSelect: React.FC<Props> = ({value, onSelect, minimum = minimumVal
       required
       tabIndex={props.tabIndex}
       onChange={ (e: React.ChangeEvent<HTMLInputElement>) => setCurrent(parse(e.target.value)) }
-      onBlur={ () => { onSelect(fallback(current, minimum, maximum)) }}
+      onBlur={ handleSelect }
     />
   )
 };
