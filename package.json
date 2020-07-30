@@ -12,7 +12,8 @@
   },
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "build": "rm public/* ; parcel build ./src/index.html --no-cache --public-url '.'"
+    "build": "rm public/* ; parcel build ./src/index.html --no-cache --public-url '.'",
+    "deploy:gh-pages": "git subtree push --prefix public/ origin gh-pages"
   },
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
