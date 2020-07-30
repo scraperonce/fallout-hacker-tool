@@ -15,4 +15,4 @@ Fallout 4 用のハッキングヘルパーです。たぶん76でもつかえ�
 ## Run development server
 
 1. Run `yarn install`
-2. Run `yarn start`
+2. Run `yarn dev`
