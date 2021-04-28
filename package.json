@@ -5,8 +5,8 @@
   "author": "Hisataka Ishii <scraper.once@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "serve": "^11.3.2",
     "styled-components": "^5.1.1"
   },
@@ -16,13 +16,11 @@
     "deploy:gh-pages": "git subtree push --prefix public/ origin gh-pages"
   },
   "devDependencies": {
-    "@parcel/resolver-default": "^2.0.0-alpha.3",
-    "@parcel/transformer-css": "^2.0.0-alpha.3",
-    "@parcel/transformer-postcss": "^2.0.0-alpha.3",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.1",
-    "parcel": "next",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/styled-components": "^5.1.9",
+    "parcel": "^2.0.0-beta.2",
     "sass": "^1.26.10"
   }
 }
